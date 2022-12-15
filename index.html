@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Popup</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div class="center">
+        <div class="container">
+            <label for="show" class="close-btn fas fa-times" title="close"></label>
+            <div class="text">
+                Extras
+            </div><br><hr><br>
+            <form action="#">
+                <div class="data">
+                    <input type="radio" id="1" name="menu">
+                    <label>Salmon +$35.00</label>
+                </div><hr>
+                <div class="data">
+                    <input type="radio" id="2" name="menu">
+                    <label>Wasabi +$35.00</label>
+                </div><hr>
+                <div class="data">
+                    <input type="radio" id="3" name="menu">
+                    <label>Unagi +$35.00</label>
+                </div><hr>
+                <div class="data">
+                    <input type="radio" id="4" name="menu">
+                    <label>Vegetables +$35.00</label>
+                </div><hr>
+                <div class="data">
+                    <input type="radio" id="5" name="menu">
+                    <label>Noodeles +$35.00</label>
+                </div><hr><br>
+                <div class="quantity">
+                    <h4>QUANTITY</h4>
+                    <span>1 Item</span>
+                    <div class="inc" style="border: 2px solid grey;">
+                        <span class="min">-</span>
+                        <span class="num">1</span>
+                        <span class="plus">+</span>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="inner"></div>
+                    <button type="submit">Apply</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- custom script -->
+    <script>
+        const Plus = document.querySelector(".plus"),
+        min = document.querySelector(".min"),
+        value = document.querySelector(".num");
+        let a = 0;
+        Plus.addEventListener("click", ()=>{
+        a++;
+        value.innerText = a;
+        })
+
+        min.addEventListener("click",()=> {
+        if(a > 1) {
+            a--;
+        value.innerText = a;
+        }
+        })
+    </script>
+</body>
+</html>
